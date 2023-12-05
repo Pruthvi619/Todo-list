@@ -1,0 +1,43 @@
+GET http://localhost:3010/todos/?status=TO%20DO
+
+###
+GET http://localhost:3010/todos/?priority=HIGH
+
+###
+GET http://localhost:3010/todos/?category=HOME
+
+###
+GET http://localhost:3010/todos/?priority=HIGH&status=DONE
+
+###
+GET http://localhost:3010/todos/?category=WORK&status=DONE
+
+###
+GET http://localhost:3010/todos/?category=LEARNING&priority=HIGH
+
+###
+GET http://localhost:3010/todos/?search_q=Learn
+
+###
+GET http://localhost:3010/todos/2/
+###
+GET http://localhost:3010/agenda/?date=2020-12-22
+###
+PUT http://localhost:3010/todos/2/
+Content-Type: application/json
+
+{
+    "dueDate": "2020-09-23"
+}
+###
+POST http://localhost:3010/todos/
+Content-Type: application/json
+
+{
+    "id": 6,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO",
+  "category": "HOME",
+  "dueDate": "2021-10-22"
+}
